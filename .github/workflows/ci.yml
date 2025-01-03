@@ -14,7 +14,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-22.04 
-    name: huma
+    name: tirith 
     strategy:
       fail-fast: false
     defaults:
