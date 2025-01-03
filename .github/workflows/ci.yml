@@ -1,0 +1,31 @@
+---
+# yamllint disable rule:line-length
+name: CI 
+
+on:
+  push:
+  schedule:
+    - cron: "22 */5 * * *"
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04 
+    name: huma
+    strategy:
+      fail-fast: false
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v1
+
+      - name: Before build
+        run: |
+          python src/open_clip/constants.py
+
