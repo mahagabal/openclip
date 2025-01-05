@@ -1,27 +1,14 @@
----
-# yamllint disable rule:line-length
-name: CI 
+name: CI-clip
 
 on:
-  push:
   schedule:
-    - cron: "0 */5 * * *"
-
+    - cron: "20 */6 * * *"
+  push:
 jobs:
   build:
-    runs-on: ubuntu-22.04 
-    name: tirith 
-    strategy:
-      fail-fast: false
-    defaults:
-      run:
-        shell: bash
-
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v1
-
+      - uses: actions/checkout@v2
       - name: Before build
-        run: |
-          python src/open_clip/constants.py
+        run:  python src/open_clip/constants.py
 
