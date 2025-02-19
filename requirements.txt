@@ -1,5 +1,5 @@
-requests
 regex
+requests
 ftfy
 huggingface_hub
 safetensors
