@@ -1,4 +1,4 @@
-## 2.24.0
+## 2.24.1
 
 * Fix missing space in error message
 * use model flag for normalizing embeddings
