@@ -2,5 +2,5 @@ regex
 requests
 ftfy
 huggingface_hub
-safetensers
+safetensors
 timm
